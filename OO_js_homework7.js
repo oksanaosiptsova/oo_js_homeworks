@@ -1,13 +1,6 @@
- var str1 = 'Wonderful';
- var str2 = 'Joyful';
- var str3 = 'Happiness';
- var str4 = 'Time';
- var str5 = 'Task';
- var str6 = 'Apple';
- var re = /[^a]{6,}/i;
- console.log (re.test(str1));
- console.log (re.test(str2));
- console.log (re.test(str3));
- console.log (re.test(str4));
- console.log (re.test(str5));
- console.log (re.test(str6));
+ function findWordsWithoutAa(text){
+   var re = /\b[^a\s,]{6,}/gi; 
+   return text.match(re);
+ }
+ 
+ console.log (findWordsWithoutAa("Wonderful, Joyful, Happiness, Time, Task, Appleee"));
